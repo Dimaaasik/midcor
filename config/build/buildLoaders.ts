@@ -1,14 +1,21 @@
 import webpack from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {BuildOptions} from "./types/config";
 
-export function buildLoaders(): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const cssloader = {
         test: /\.s[ac]ss$/i,
         use: [
             // создает 'style' nodes из js строк
-            "style-loader",
+            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+                loader: "css-loader",
+                options: {
+                    modules: true,
+                }
+            },
             // Транслипует css в CommonJS
-            "css-loader",
             //компилирует sass в css
             "sass-loader",
         ],
