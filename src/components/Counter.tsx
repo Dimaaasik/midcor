@@ -14,8 +14,8 @@ export const Counter = () => {
     return (
         <div className={classes.plus}>
             <h1>{count}</h1>
-            <button onClick={increment} className={'plus'}>increment</button>
-            <button onClick={decrement} className={'minus'}>decrement</button>
+            <button onClick={increment}>increment</button>
+            <button onClick={decrement}>decrement</button>
         </div>
     );
 };
