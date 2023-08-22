@@ -12,10 +12,15 @@ export const Counter = () => {
         setCount(count - 1)
     }
     return (
-        <div className={classes.plus}>
+        // <div className={classes.plus}>
+        //     <h1>{count}</h1>
+        //     <button onClick={increment}>increment</button>
+        //     <button onClick={decrement}>decrement</button>
+        // </div>
+        <div >
             <h1>{count}</h1>
-            <button onClick={increment}>increment</button>
-            <button onClick={decrement}>decrement</button>
+            <button onClick={increment} className={classes.plus}>increment</button>
+            <button onClick={decrement} className={classes.minus}>decrement</button>
         </div>
     );
 };
