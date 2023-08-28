@@ -3,8 +3,6 @@ import {Counter} from "./components/Counter";
 import App from "./App";
 
 render(
-    <div>
-        <App/>
-    </div>,
+    <App/>,
     document.getElementById('root')
 )
