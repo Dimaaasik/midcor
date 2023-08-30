@@ -10,4 +10,5 @@ const App = () => {
     );
 };
 
+// worked with Docker
 export default App;
