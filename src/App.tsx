@@ -10,5 +10,5 @@ const App = () => {
     );
 };
 
-// worked with Docker day2 ((
+// worked with Docker day3...
 export default App;
